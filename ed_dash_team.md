@@ -24,12 +24,42 @@ co_investigators:
   affiliation: School of Biological Sciencs
   img: edward_wallace.jpeg
   url: https://www.ed.ac.uk/profile/dr-edward-wallace
-  
+
+project_lead_extension:
+- name: Alison Meynert 
+  role: Senior Research Fellow & IGC Bioinformatics Analysis Core Manager 
+  affiliation: MRC Human Genetics Unit, MRC Institute of Genetics and Cancer
+  img: alison_meynert.jpeg
+  url: https://www.ed.ac.uk/profile/dr-alison-meynert
+
+co_investigators_extension:
+- name: Ailith Ewing
+  role: Chancellor's Fellow
+  affiliation: MRC Human Genetics Unit and Cancer Research UK Edinburgh Centre, MRC Institute of Genetics and Cancer
+  img: ailith_ewing.jpeg
+  url: https://www.ed.ac.uk/profile/dr-ailith-ewing
+- name: Catalina Vallejos
+  role: Chancellor’s Fellow & Fellow of the Turing Institute
+  affiliation: MRC Human Genetics Unit, MRC Institute of Genetics and Cancer
+  img: catalina_vallejos.jpeg
+  url: https://www.ed.ac.uk/mrc-human-genetics-unit/research/vallejos-group
+- name: Edward Wallace
+  role: Sir Henry Dale Fellow 
+  affiliation: School of Biological Sciencs
+  img: edward_wallace.jpeg
+  url: https://www.ed.ac.uk/profile/dr-edward-wallace
+- name: Giacomo Peru 
+  role: Project Coordinator
+  affiliation: EPCC
+  img: giacomo_peru_2.jpeg
+  url: https://www.epcc.ed.ac.uk/about-us/our-team/giacomo-peru
+
 programme_coordination:
 - name: Giacomo Peru 
   role: Coordinator
   affiliation: EPCC
   img: giacomo_peru_2.jpeg
+  url: https://www.epcc.ed.ac.uk/about-us/our-team/giacomo-peru
 
 edcarp_coordination:
 - name: Giacomo Peru 
@@ -40,7 +70,14 @@ edcarp_coordination:
   role: Development Assistant 
   affiliation: School of Biological Sciences
   img: flic_anderson.jpeg
-  
+
+programme_coordination_extension:
+- name: Andrzej Romanik
+  role: Workshops Coordinator
+  affiliation: EPCC
+  img: andrzej_romaniuk.jpeg
+  url: https://andrzejromaniuk.github.io/CV/
+
 dev_computational_workflows:
 - name: Alison Meynert, Co-Lead
   role: Senior Research Fellow & IGC Bioinformatics Analysis Core Manager 
@@ -145,10 +182,30 @@ web_development:
   affiliation: MRC IGC CRUK Edinburgh Centre
   img: robert_nagy_eddash_2.jpeg
 
+lesson_review:
+- name: Graeme Grimes
+  role: Bioinformatician & IGC Bioinformatics Training Coordinator
+  affiliation: MRC Human Genetics Unit, MRC Institute of Genetics and Cancer
+  img: graeme_grimes.jpeg
+  url:
+- name: Mary Llewellyn
+  role: Course Developer
+  affiliation: School of Mathematics
+  img: mary_llewellyn.jpeg
+  url: 
+- name: Tim Booth
+  role: Bioinformatician/Programmer
+  affiliation: Edinburgh Genomics
+  img: tim_booth.jpeg
+  url:
+
+
 show_heading: false 
 ---  
 
 Our team brings together subject-matter expertise in ’omics, statistics, and computation, with strengths in research data management and the UK’s largest Carpentries chapter, to build an extensive cohort of confident practitioners and a scalable and sustainable network of health and bioscience data science training for the UK.
+
+# Main project (Feb 2021 - Feb 2023)
 
 ## Co-Investigators
 
@@ -228,6 +285,52 @@ The Ed-DaSH Steering Group is formed of the Co-investigators and Co-leads of the
     <tr> 
       <td><img src="images/profiles/{{ member.img }}" width=120 alt="{{ member.name }}"></td>
       <td>{{ member.name }}, {{ member.role }}, {{ member.affiliation }}</td>
+    </tr>
+    {% endfor %}
+ </table>
+
+# Extension (Dec 2023 - Mar 2024)
+
+## Project Lead
+
+<table class="center-cell-item">
+    {% for member in page.project_lead_extension %}
+    <tr>
+      <td><img src="images/profiles/{{ member.img }}" width=120 alt="{{ member.name }}"></td>
+      <td><a href="{{ member.url }}" alt="{{ member.name }}">{{ member.name }}</a>, {{ member.role }}, {{ member.affiliation }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+## Co-Investigators
+
+<table class="center-cell-item">
+    {% for member in page.co_investigators_extension %}
+    <tr>
+      <td><img src="images/profiles/{{ member.img }}" width=120 alt="{{ member.name }}"></td>
+      <td><a href="{{ member.url }}" alt="{{ member.name }}">{{ member.name }}</a>, {{ member.role }}, {{ member.affiliation }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+## Lesson Reviewers
+
+<table class="center-cell-item">
+    {% for member in page.lesson_review %}
+    <tr>
+      <td><img src="images/profiles/{{ member.img }}" width=120 alt="{{ member.name }}"></td>
+      <td><a href="{{ member.url }}" alt="{{ member.name }}">{{ member.name }}</a>, {{ member.role }}, {{ member.affiliation }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+## Programme Coordination
+
+<table class="center-cell-item">
+    {% for member in page.programme_coordination_extension %}
+    <tr> 
+      <td><img src="images/profiles/{{ member.img }}" width=80 alt="{{ member.name }}"></td>
+      <td><a href="{{ member.url }}" alt="{{ member.name }}">{{ member.name }}</a>, {{ member.role }}, {{ member.affiliation }}</td>
     </tr>
     {% endfor %}
  </table>
